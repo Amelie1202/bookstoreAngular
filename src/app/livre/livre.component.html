@@ -1,0 +1,30 @@
+<body>
+    <form>
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="isbn">ISBN</label>
+                    <input [(ngModel)]="newLivre.isbn" type="text" name="isbn" class="form-control" id="isbn">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="titre">Titre</label>
+                    <input [(ngModel)]="newLivre.titre" type="text" name="titre" class="form-control" id="titre">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="auteur">Auteur</label>
+                    <input [(ngModel)]="newLivre.auteur" type="text" name="auteur" class="form-control" id="auteur">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="dateParution">Date de parution</label>
+                    <input [(ngModel)]="newLivre.dateParution" type="date" name="date" class="form-control" id="dateParution">
+                </div>
+            </div>
+
+            <td><button type="button" class="btn btn-outline-info"
+                (click)="addLivre()">Ajouter</button></td>
+       
+
+        </div>
+    </form>
+</body>

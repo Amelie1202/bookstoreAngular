@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <th>IdEtagere</th>
+            <th>Libelle Etagere</th>
+            <th>Suppression</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let etagere of listEtagere">
+                <td>{{etagere.idEtagere}}</td>
+                <td>{{etagere.libelleEtagere}}</td>
+                
+                <td><button type="button" class="btn btn-outline-danger"
+                    (click)="delete(etagere.idEtagere)">Supprimer</button></td>
+              
+               
+               
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <th>IdAuteur</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Afficher ses livres</th>
+            <th>Modifier </th>
+            <th>Suppression</th>
+    
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let auteur of listAuteur">
+                <td>{{auteur.idAuteur}}</td>
+                <td>{{auteur.nom}}</td>
+                <td>{{auteur.prenom}}</td>
+
+                <td><a type="button" class="btn btn-outline-warning"
+                   >Afficher</a></td>
+                    <td><a type="button" class="btn btn-outline-success"
+                      >Modifier</a></td>     
+                <td><button type="button" class="btn btn-outline-danger"
+                    (click)="delete(auteur.idAuteur)">Supprimer</button></td>
+              
+               
+               
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+<body>
+    <form>
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="libelle">Categorie</label>
+                    <input [(ngModel)]="newCategorie.libelle" type="text" name="libelle" class="form-control" id="libelle">
+                </div>
+               
+
+            <td><button type="button" class="btn btn-outline-danger"
+                (click)="addCategorie()">Ajouter</button></td>
+                <td><a type="button" class="btn btn-outline-info"
+                    href="listecategorie">Liste des catégories</a></td>
+            </div>
+
+        </div>
+    </form>
+</body>
