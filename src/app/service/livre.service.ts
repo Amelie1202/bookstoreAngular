@@ -19,7 +19,7 @@ return this.http.get<Livre>("http://localhost:8080/livres/"+id).pipe()
   }
 
   deleteOne(id:number){ 
-    return this.http.delete("http://localhost:8080/livres/"+id).pipe() 
+    return this.http.delete("http://localhost:8080/livres/delete2/"+id).pipe() 
   }
   addNew(livre: Livre){
 
@@ -30,7 +30,18 @@ return this.http.get<Livre>("http://localhost:8080/livres/"+id).pipe()
     return this.http.put("http://localhost:8080/livres/"+id, livre).pipe() 
   }
 
-
+  affecterAuteur(idLivre: number, idAuteur: number){
+    return this.http.put("http://localhost:8080/livres/affecterAuteur/"+idLivre+"/"+ idAuteur,"").pipe()
+  }
+  affecterCategorie(idLivre: number, idCategorie: number){
+    return this.http.put("http://localhost:8080/livres/affecterCategorie/"+idLivre+"/"+ idCategorie,"").pipe()
+  }
+  affecterEtagere(idLivre: number, idEtagere: number){
+    return this.http.put("http://localhost:8080/livres/affecterEtagere/"+idLivre+"/"+ idEtagere,"").pipe()
+  }
+findByAuteur(idAuteur: number){
+  return this.http.get<Livre[]>("http://localhost:8080/livres/byAuteur/"+idAuteur).pipe()
+}
 
 }
   

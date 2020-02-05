@@ -15,6 +15,10 @@ import { ListeauteurComponent } from './listeauteur/listeauteur.component';
 import { HomeComponent } from './home/home.component';
 import { ListecategorieComponent } from './listecategorie/listecategorie.component';
 import { ListeetagereComponent } from './listeetagere/listeetagere.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { AfficherlivreComponent } from './afficherlivre/afficherlivre.component';
+import { ModifierauteurComponent } from './modifierauteur/modifierauteur.component'; //Module de message alerte (pop up)
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,17 @@ import { ListeetagereComponent } from './listeetagere/listeetagere.component';
     ListeauteurComponent,
     HomeComponent,
     ListecategorieComponent,
-    ListeetagereComponent
+    ListeetagereComponent,
+    AfficherlivreComponent,
+    ModifierauteurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    SweetAlert2Module.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

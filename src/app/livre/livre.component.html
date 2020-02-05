@@ -10,21 +10,38 @@
                     <label for="titre">Titre</label>
                     <input [(ngModel)]="newLivre.titre" type="text" name="titre" class="form-control" id="titre">
                 </div>
-                <div class="form-group col-md-5">
-                    <label for="auteur">Auteur</label>
-                    <input [(ngModel)]="newLivre.auteur" type="text" name="auteur" class="form-control" id="auteur">
+                <div class="form-group col-md-4">
+                    <label for="affectationauteur">Auteur</label>
+                    <select class="form-control" name="auteur" id="auteur" [(ngModel)]="newLivre.auteur">
+                        <option *ngFor="let auteur of listAuteur" [ngValue]="auteur">{{auteur.nom}}
+                        </option>
+                    </select>
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="dateParution">Date de parution</label>
                     <input [(ngModel)]="newLivre.dateParution" type="date" name="date" class="form-control" id="dateParution">
                 </div>
+                <div class="form-group col-md-4">
+                    <label for="affectationcategorie">Categorie</label>
+                    <select class="form-control" name="categorie" id="categorie" [(ngModel)]="newLivre.categorie">
+                        <option *ngFor="let categorie of listCategorie" [ngValue]="categorie">{{categorie.libelle}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="affectationetagere">Etagere</label>
+                    <select class="form-control" name="etagere" id="etagere" [(ngModel)]="newLivre.etagere">
+                        <option *ngFor="let etagere of listEtagere" [ngValue]="etagere">{{etagere.libelleEtagere}}
+                        </option>
+                    </select>
+                </div>
             </div>
 
             <td><button type="button" class="btn btn-outline-info"
                 (click)="addLivre()">Ajouter</button></td>
        
-
-        </div>
+              
+         </div>
     </form>
 </body>

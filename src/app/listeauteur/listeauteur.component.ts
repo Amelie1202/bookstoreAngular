@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Auteur } from '../models/auteur';
 import {AuteurService} from'../service/auteur.service';
+import Swal from'sweetalert2'; //swal pour les alertes dans le ts 
+import { LivreService } from '../service/livre.service';
+import { Livre } from '../models/livre';
+import { faFeather} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-listeauteur',
@@ -8,8 +12,10 @@ import {AuteurService} from'../service/auteur.service';
   styleUrls: ['./listeauteur.component.css']
 })
 export class ListeauteurComponent implements OnInit {
+  faFeather = faFeather;
   listAuteur:Auteur[] = [];
-  constructor(private auteurService: AuteurService) { }
+  listLivreAuteur: Livre[]=[];
+  constructor(private auteurService: AuteurService, private livreService: LivreService) { }
 
   ngOnInit() {
     this.auteurService.getAll().subscribe(
@@ -21,8 +27,27 @@ export class ListeauteurComponent implements OnInit {
   delete(id:number){
     this.auteurService.deleteOne(id).subscribe(
       data =>{
-        this.ngOnInit(); 
+        if(data==true){
+          this.ngOnInit(); 
+        }
+        else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Erreur!',
+            text: 'Cet auteur est lié à un livre, vous ne pouvez pas le supprimer',
+            footer: '<a href>Veuillez choisir un autre auteur</a>'
+          })
+        }
       }
     )
+      }
+
+      afficherLivre(idAuteur: number){
+        this.livreService.findByAuteur(idAuteur).subscribe(
+          data => {this.listLivreAuteur = data;
+ 
+          } 
+
+        )
       }
 }

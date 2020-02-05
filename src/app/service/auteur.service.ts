@@ -18,7 +18,7 @@ return this.http.get<Auteur>("http://localhost:8080/auteurs/"+id).pipe()
   }
 
   deleteOne(id:number){ 
-    return this.http.delete("http://localhost:8080/auteurs/"+id).pipe() 
+    return this.http.delete("http://localhost:8080/auteurs/delete2/"+id).pipe() 
   }
   addNew(auteur:Auteur){
 

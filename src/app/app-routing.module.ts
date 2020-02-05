@@ -8,6 +8,9 @@ import { ListelivreComponent } from './listelivre/listelivre.component';
 import { ListeauteurComponent } from './listeauteur/listeauteur.component';
 import { ListecategorieComponent } from './listecategorie/listecategorie.component';
 import { ListeetagereComponent } from './listeetagere/listeetagere.component';
+import { HomeComponent } from './home/home.component';
+import { AfficherlivreComponent } from './afficherlivre/afficherlivre.component';
+import { ModifierauteurComponent } from './modifierauteur/modifierauteur.component';
 
 
 const routes: Routes = [
@@ -49,6 +52,20 @@ const routes: Routes = [
   {
     path:"listeetagere",
     component:ListeetagereComponent
+  },
+
+  {
+    path:"home",
+    component:HomeComponent
+  },
+  {
+    path:"afficherlivre/:id",
+    component:AfficherlivreComponent
+  },
+
+  {
+    path:"modifierauteur/:id",
+    component:ModifierauteurComponent
   }
 ];
 

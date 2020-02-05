@@ -17,7 +17,7 @@ return this.http.get<Categorie>("http://localhost:8080/categories/"+id).pipe()
   }
 
   deleteOne(id:number){ 
-    return this.http.delete("http://localhost:8080/categories/"+id).pipe() 
+    return this.http.delete("http://localhost:8080/categories/delete2/"+id).pipe() 
   }
   addNew(categorie: Categorie){
 

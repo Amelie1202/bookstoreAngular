@@ -18,7 +18,7 @@ return this.http.get<Etagere>("http://localhost:8080/etageres/"+id).pipe()
   }
 
   deleteOne(id:number){ 
-    return this.http.delete("http://localhost:8080/etageres/"+id).pipe() 
+    return this.http.delete("http://localhost:8080/etageres/delete2/"+id).pipe() 
   }
   addNew(etagere: Etagere){
 
