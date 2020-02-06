@@ -4,15 +4,15 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="isbn">ISBN</label>
-                    <input [(ngModel)]="newLivre.isbn" type="text" name="isbn" class="form-control" id="isbn">
+                    <input [(ngModel)]="livre.isbn" type="text" name="isbn" class="form-control" id="isbn">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="titre">Titre</label>
-                    <input [(ngModel)]="newLivre.titre" type="text" name="titre" class="form-control" id="titre">
+                    <input [(ngModel)]="livre.titre" type="text" name="titre" class="form-control" id="titre">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="affectationauteur">Auteur</label>
-                    <select class="form-control" name="auteur" id="auteur" [(ngModel)]="newLivre.auteur">
+                    <select class="form-control" name="auteur" id="auteur" [(ngModel)]="livre.auteur">
                         <option *ngFor="let auteur of listAuteur" [ngValue]="auteur">{{auteur.nom}}
                         </option>
                     </select>
@@ -20,12 +20,12 @@
                 <div class="form-group col-md-6"></div>
                 <div class="form-group col-md-4">
                     <label for="dateParution">Date de parution</label>
-                    <input [(ngModel)]="newLivre.dateParution" type="date" name="date" class="form-control" id="dateParution">
+                    <input [(ngModel)]="livre.dateParution" type="date" name="date" class="form-control" id="dateParution">
                 </div>
                 <div class="form-group col-md-6"></div>
                 <div class="form-group col-md-4">
                     <label for="affectationcategorie">Categorie</label>
-                    <select class="form-control" name="categorie" id="categorie" [(ngModel)]="newLivre.categorie">
+                    <select class="form-control" name="categorie" id="categorie" [(ngModel)]="livre.categorie">
                         <option *ngFor="let categorie of listCategorie" [ngValue]="categorie">{{categorie.libelle}}
                         </option>
                     </select>
@@ -33,7 +33,7 @@
                 <div class="form-group col-md-6"></div>
                 <div class="form-group col-md-4">
                     <label for="affectationetagere">Etagere</label>
-                    <select class="form-control" name="etagere" id="etagere" [(ngModel)]="newLivre.etagere">
+                    <select class="form-control" name="etagere" id="etagere" [(ngModel)]="livre.etagere">
                         <option *ngFor="let etagere of listEtagere" [ngValue]="etagere">{{etagere.libelleEtagere}}
                         </option>
                     </select>
@@ -41,7 +41,7 @@
             </div>
 
             <td><button type="button" class="btn btn-outline-info"
-                (click)="addLivre()">Ajouter</button></td>
+                (click)="update()">Modifier</button></td>
        
               
          </div>

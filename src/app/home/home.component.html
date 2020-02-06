@@ -1,8 +1,14 @@
-<fa-icon [icon]="faBookOpen"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon>
+<div class="container">
+<div class="form-row col-md-3"></div>
+<fa-icon [icon]="faBookOpen"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon></div>
+<div class="container">
+<div class="form-row col-md-3"></div>
+<fa-icon [icon]="faBookOpen"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="right"></fa-icon></div>
 <body>
     <form>
-        <div class="container">
-            <h1 class="text center">Bienvenue sur notre Bibliothèque ! </h1>
+       
+            <div class="form-group col-md-6"></div>
+            <h1 class="text center"> Bienvenue sur notre Bibliothèque ! </h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -10,6 +16,9 @@
                     </div>
                     <div class="carousel-item">
                         <img src="../../assets/bibliotheque.jpg " class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/livreouvert.jpg " class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -21,6 +30,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
+        
     </form>
 </body>
+
+<app-footer></app-footer>

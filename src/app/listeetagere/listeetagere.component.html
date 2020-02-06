@@ -1,8 +1,12 @@
+<fa-icon [icon]="faStream"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon>
+<div class="form-group col-md-6"></div>
 <div class="container">
-    <table class="table">
-        <thead class="thead-dark">
+    <table class="table table-striped">
+        <thead class="table-info">
             <th>IdEtagere</th>
             <th>Libelle Etagere</th>
+            <th>Afficher</th>
+            <th>Modifier</th>
             <th>Suppression</th>
 
         </thead>
@@ -11,13 +15,24 @@
                 <td>{{etagere.idEtagere}}</td>
                 <td>{{etagere.libelleEtagere}}</td>
                 
+                <td><a type="button" class="btn btn-outline-success"
+                    href="{{'http://localhost:4200/afficherlivreetagere/'+etagere.idEtagere}}" >Afficher ses livres</a></td>
+                    <td><a type="button" class="btn btn-outline-secondary"
+                        href="{{'http://localhost:4200/modifieretagere/'+etagere.idEtagere}}" >Modifier</a></td>
                 <td><button type="button" class="btn btn-outline-danger"
                     (click)="delete(etagere.idEtagere)">Supprimer</button></td>
               
                
                
             </tr>
-
+           
         </tbody>
+        
     </table>
+     
 </div>
+
+<div class="text-center">
+    <img src="../../assets/etagere.jpg" class="img-fluid" alt="..."></div>
+ 
+

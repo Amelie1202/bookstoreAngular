@@ -42,7 +42,14 @@ return this.http.get<Livre>("http://localhost:8080/livres/"+id).pipe()
 findByAuteur(idAuteur: number){
   return this.http.get<Livre[]>("http://localhost:8080/livres/byAuteur/"+idAuteur).pipe()
 }
+findByCategorie(idCategorie: number){
+  return this.http.get<Livre[]>("http://localhost:8080/livres/byCategorie/"+idCategorie).pipe()
 
+}
+findByEtagere(idEtagere: number){
+  return this.http.get<Livre[]>("http://localhost:8080/livres/byEtagere/"+idEtagere).pipe()
+
+}
 }
   
 

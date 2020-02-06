@@ -2,19 +2,19 @@
     <form>
         <div class="container">
             <div class="form-row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label for="nom">Nom</label>
                     <input [(ngModel)]="newAuteur.nom" type="text" name="nom" class="form-control" id="nom">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="prenom">Prenom</label>
                     <input [(ngModel)]="newAuteur.prenom" type="text" name="prenom" class="form-control" id="prenom">
                 </div>
 
+           
+            </div>
             <td><button type="button" class="btn btn-outline-danger"
                 (click)="addAuteur()">Ajouter</button></td>
-            </div>
-
         </div>
     </form>
 </body>

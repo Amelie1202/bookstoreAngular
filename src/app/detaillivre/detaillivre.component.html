@@ -11,8 +11,8 @@
             <th>Date de parution</th>
             <th>Categorie</th>
             <th>Etagere</th>
-            <th>Modifier</th>
-            <th>Suppression</th>
+            <th>Resumé</th>
+            
 
         </thead>
         <tbody>
@@ -24,12 +24,8 @@
                 <td>{{livre.dateParution}}</td>
                 <td>{{livre?.categorie?.libelle}}</td>
                 <td>{{livre?.etagere?.libelleEtagere}}</td>
-                <td><a type="button" class="btn btn-outline-secondary"
-                    href="{{'http://localhost:4200/detaillivre/'+livre.idLivre}}">Resume</a></td>
-                <td><a type="button" class="btn btn-outline-secondary"
-                    href="{{'http://localhost:4200/modifierlivre/'+livre.idLivre}}">Modifier</a></td>
-                <td><button type="button" class="btn btn-outline-danger"
-                    (click)="delete(livre.idLivre)">Supprimer</button></td>
+                <td>{{livre.resume}}</td>
+            
               
                
                
@@ -38,5 +34,3 @@
         </tbody>
     </table>
 </div>
-<div class="text-center">
-<img src="../../assets/listelivre.jpeg " class="img-fluid" alt="Responsive image"></div>

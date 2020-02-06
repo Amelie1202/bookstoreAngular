@@ -19,6 +19,13 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AfficherlivreComponent } from './afficherlivre/afficherlivre.component';
 import { ModifierauteurComponent } from './modifierauteur/modifierauteur.component'; //Module de message alerte (pop up)
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AfficherlivrecategorieComponent } from './afficherlivrecategorie/afficherlivrecategorie.component';
+import { AfficherlivreetagereComponent } from './afficherlivreetagere/afficherlivreetagere.component';
+import { ModifiercategorieComponent } from './modifiercategorie/modifiercategorie.component';
+import { ModifieretagereComponent } from './modifieretagere/modifieretagere.component';
+import { ModifierlivreComponent } from './modifierlivre/modifierlivre.component';
+import { FooterComponent } from './footer/footer.component';
+import { DetaillivreComponent } from './detaillivre/detaillivre.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ListecategorieComponent,
     ListeetagereComponent,
     AfficherlivreComponent,
-    ModifierauteurComponent
+    ModifierauteurComponent,
+    AfficherlivrecategorieComponent,
+    AfficherlivreetagereComponent,
+    ModifiercategorieComponent,
+    ModifieretagereComponent,
+    ModifierlivreComponent,
+    FooterComponent,
+    DetaillivreComponent
   ],
   imports: [
     BrowserModule,

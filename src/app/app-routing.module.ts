@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LivreComponent } from './livre/livre.component';
 import { AuteurComponent } from './auteur/auteur.component';
@@ -11,6 +11,11 @@ import { ListeetagereComponent } from './listeetagere/listeetagere.component';
 import { HomeComponent } from './home/home.component';
 import { AfficherlivreComponent } from './afficherlivre/afficherlivre.component';
 import { ModifierauteurComponent } from './modifierauteur/modifierauteur.component';
+import { ModifierlivreComponent } from './modifierlivre/modifierlivre.component';
+import { ModifiercategorieComponent } from './modifiercategorie/modifiercategorie.component';
+import { ModifieretagereComponent } from './modifieretagere/modifieretagere.component';
+import { AfficherlivrecategorieComponent } from './afficherlivrecategorie/afficherlivrecategorie.component';
+import { AfficherlivreetagereComponent } from './afficherlivreetagere/afficherlivreetagere.component';
 
 
 const routes: Routes = [
@@ -66,6 +71,27 @@ const routes: Routes = [
   {
     path:"modifierauteur/:id",
     component:ModifierauteurComponent
+  },
+
+  {
+    path:"modifierlivre/:id",
+    component:ModifierlivreComponent
+  },
+  {
+    path:"modifiercategorie/:id",
+    component:ModifiercategorieComponent
+  },
+  {
+    path:"modifieretagere/:id",
+    component:ModifieretagereComponent
+  },
+  {
+    path:"afficherlivrecategorie/:id",
+    component:AfficherlivrecategorieComponent
+  },
+  {
+    path:"afficherlivreetagere/:id",
+    component:AfficherlivreetagereComponent
   }
 ];
 

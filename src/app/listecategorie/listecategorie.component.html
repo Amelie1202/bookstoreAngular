@@ -1,8 +1,12 @@
+<fa-icon [icon]="faList"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon>
+<div class="form-group col-md-6"></div>
 <div class="container">
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="table-secondary">
             <th>IdCategorie</th>
             <th>Libelle Categorie</th>
+            <th>Afficher les livres</th>
+            <th>Modifier</th>
             <th>Suppression</th>
 
         </thead>
@@ -11,6 +15,10 @@
                 <td>{{categorie.idCategorie}}</td>
                 <td>{{categorie.libelle}}</td>
                 
+                <td><a type="button" class="btn btn-outline-success"
+                    href="{{'http://localhost:4200/afficherlivrecategorie/'+categorie.idCategorie}}">Afficher ses livres</a></td>
+                    <td><a type="button" class="btn btn-outline-secondary"
+                        href="{{'http://localhost:4200/modifiercategorie/'+categorie.idCategorie}}" >Modifier</a></td>
                 <td><button type="button" class="btn btn-outline-danger"
                     (click)="delete(categorie.idCategorie)">Supprimer</button></td>
               
@@ -21,3 +29,5 @@
         </tbody>
     </table>
 </div>
+<div class="text-center">
+    <img src="../../assets/pilelivre.jpg " class="img-fluid" alt="Responsive image"></div>
