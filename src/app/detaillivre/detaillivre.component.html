@@ -1,34 +1,16 @@
 <div class="form-group col-md-6"></div>
-<fa-icon [icon]="faBook"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon>
+
 <div class="form-group col-md-6"></div>
 <div class="container">
     <table class="table table-striped">
-        <thead class="table-danger">
-            <th>IdLivre</th>
-            <th>ISBN</th>
+        <thead class="table-secondary">
             <th>Titre</th>
-            <th>Auteur</th>
-            <th>Date de parution</th>
-            <th>Categorie</th>
-            <th>Etagere</th>
-            <th>Resumé</th>
-            
-
+            <th>Résumé</th>
         </thead>
         <tbody>
-            <tr *ngFor="let livre of listLivre">
-                <td>{{livre.idLivre}}</td>
-                <td>{{livre.isbn}}</td>
+            <tr>
                 <td>{{livre.titre}}</td>
-                <td>{{livre?.auteur?.nom}}</td>
-                <td>{{livre.dateParution}}</td>
-                <td>{{livre?.categorie?.libelle}}</td>
-                <td>{{livre?.etagere?.libelleEtagere}}</td>
-                <td>{{livre.resume}}</td>
-            
-              
-               
-               
+                <td>{{livre.resume}}</td> 
             </tr>
 
         </tbody>

@@ -16,6 +16,11 @@ import { ModifiercategorieComponent } from './modifiercategorie/modifiercategori
 import { ModifieretagereComponent } from './modifieretagere/modifieretagere.component';
 import { AfficherlivrecategorieComponent } from './afficherlivrecategorie/afficherlivrecategorie.component';
 import { AfficherlivreetagereComponent } from './afficherlivreetagere/afficherlivreetagere.component';
+import { DetaillivreComponent } from './detaillivre/detaillivre.component';
+import { InfoComponent } from './info/info.component';
+import { VisiteComponent } from './visite/visite.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.component';
 
 
 const routes: Routes = [
@@ -92,6 +97,26 @@ const routes: Routes = [
   {
     path:"afficherlivreetagere/:id",
     component:AfficherlivreetagereComponent
+  },
+  {
+    path:"detaillivre/:id",
+    component:DetaillivreComponent
+  },
+  {
+    path:"info",
+    component:InfoComponent
+  },
+  {
+    path:"visite",
+    component:VisiteComponent
+  },
+  {
+    path:"utilisateur",
+    component:UtilisateurComponent
+  },
+  {
+    path:"listeutilisateur",
+    component:ListeutilisateurComponent
   }
 ];
 

@@ -1,0 +1,33 @@
+
+<div class="form-group col-md-6"></div>
+<div class="container">
+    <table class="table table-striped">
+        <thead class="table-secondary">
+            <th>IdUtilisateur</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Livres empruntés</th>
+            <th>Modifier</th>
+            <th>Suppression</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let utilisateur of listUtilisateur">
+                <td>{{utilisateur.idUtilisateur}}</td>
+                <td>{{utilisateur.nom}}</td>
+                <td>{{utilisateur.prenom}}</td>
+                <td>{{utilisateur.email}}</td>
+                <td>{{utilisateur?.livre}}</td>
+                <td><a type="button" class="btn btn-outline-warning"
+                   >Modifier</a></td>
+                <td><button type="button" class="btn btn-outline-danger"
+                    (click)="delete(utilisateur.idUtilisateur)">Supprimer</button></td>
+              
+               
+               
+            </tr>
+
+        </tbody>
+    </table>
+</div>

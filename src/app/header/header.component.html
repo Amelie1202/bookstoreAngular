@@ -1,38 +1,43 @@
 
 <nav class="navbar navbar-expand-lg " style="background-color: brown;">
-    <a class="navbar-brand" href="home">Menu</a>
+    <a class="navbar-brand police" href="home">Biblio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="listelivre">Liste Livres</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="listeauteur">Liste auteur </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="listecategorie">Liste catégorie </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="listeetagere">Liste étagère </a>
-          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle police" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Listes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item police" href="listeutilisateur">Liste utilisateur </a>
+            <a class="dropdown-item police" href="listelivre">Liste Livres</a>
+            <a class="dropdown-item police" href="listeauteur">Liste auteur </a>
+            <a class="dropdown-item police"  href="listecategorie">Liste catégorie </a>
+            <a class="dropdown-item police" href="listeetagere">Liste étagère </a>
+          
+          </div>
+        </li>
+       
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ajouter
+            <a class="nav-link dropdown-toggle police" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ajout
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="livre">Ajouter un livre</a>
-              <a class="dropdown-item" href="auteur">Ajouter un auteur</a>
-              <a class="dropdown-item" href="categorie">Ajouter une categorie</a>
-              <a class="dropdown-item" href="etagere">Ajouter une etagere</a>
+              <a class="dropdown-item police" href="livre">Ajouter un livre</a>
+              <a class="dropdown-item police" href="auteur">Ajouter un auteur</a>
+              <a class="dropdown-item police" href="categorie">Ajouter une catégorie</a>
+              <a class="dropdown-item police" href="etagere">Ajouter une étagère</a>
+            
             </div>
           </li>
-      
+          
       </ul>
     </div>
+    <td><a type="button" class="btn btn-outline-primary"
+      href="utilisateur">Inscription</a></td>
   </nav>
   
 

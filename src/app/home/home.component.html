@@ -1,24 +1,21 @@
-<div class="container">
-<div class="form-row col-md-3"></div>
-<fa-icon [icon]="faBookOpen"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="left"></fa-icon></div>
-<div class="container">
-<div class="form-row col-md-3"></div>
-<fa-icon [icon]="faBookOpen"size= "6x" [spin]="isSyncAnimated" (click)="isSyncAnimated=!isSyncAnimated" pull="right"></fa-icon></div>
+
 <body>
-    <form>
-       
-            <div class="form-group col-md-6"></div>
-            <h1 class="text center"> Bienvenue sur notre Bibliothèque ! </h1>
+    <form>  
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../../assets/biblio.jpg " class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item active taille">
                         <img src="../../assets/bibliotheque.jpg " class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="text-center"style="color:  crimson;">Bibliothèque BO</h1>
+                            <p style="color: rgb(231, 14, 50);">Un jour un livre, un jour une histoire...</p>
+                          </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item taille">
                         <img src="../../assets/livreouvert.jpg " class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="text-center" style="color: crimson;">Bibliothèque BO</h1>
+                            <p style="color: rgb(231, 14, 50);">Un jour un livre, un jour une histoire...</p>
+                          </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -33,5 +30,4 @@
         
     </form>
 </body>
-
 <app-footer></app-footer>

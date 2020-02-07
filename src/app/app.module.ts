@@ -26,6 +26,10 @@ import { ModifieretagereComponent } from './modifieretagere/modifieretagere.comp
 import { ModifierlivreComponent } from './modifierlivre/modifierlivre.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetaillivreComponent } from './detaillivre/detaillivre.component';
+import { InfoComponent } from './info/info.component';
+import { VisiteComponent } from './visite/visite.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { DetaillivreComponent } from './detaillivre/detaillivre.component';
     ModifieretagereComponent,
     ModifierlivreComponent,
     FooterComponent,
-    DetaillivreComponent
+    DetaillivreComponent,
+    InfoComponent,
+    VisiteComponent,
+    UtilisateurComponent,
+    ListeutilisateurComponent
   ],
   imports: [
     BrowserModule,
