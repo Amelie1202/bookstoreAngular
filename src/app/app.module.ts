@@ -15,6 +15,7 @@ import { ListeauteurComponent } from './listeauteur/listeauteur.component';
 import { HomeComponent } from './home/home.component';
 import { ListecategorieComponent } from './listecategorie/listecategorie.component';
 import { ListeetagereComponent } from './listeetagere/listeetagere.component';
+//Popup SweetAlert2
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AfficherlivreComponent } from './afficherlivre/afficherlivre.component';
 import { ModifierauteurComponent } from './modifierauteur/modifierauteur.component'; //Module de message alerte (pop up)
@@ -30,6 +31,13 @@ import { InfoComponent } from './info/info.component';
 import { VisiteComponent } from './visite/visite.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.component';
+//Modules Angular Material
+import {BrowserAnimationsModule} from'@angular/platform-browser/animations';
+import {MatTableModule} from'@angular/material/table';
+import {MatIconModule} from'@angular/material/icon';
+import {MatSortModule} from'@angular/material/sort';
+import { TestComponent } from './test/test.component';
+import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutilisateur.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +64,9 @@ import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.c
     InfoComponent,
     VisiteComponent,
     UtilisateurComponent,
-    ListeutilisateurComponent
+    ListeutilisateurComponent,
+    TestComponent,
+    ModifierutilisateurComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +74,11 @@ import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.c
     FormsModule,
     HttpClientModule,
     SweetAlert2Module.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatSortModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

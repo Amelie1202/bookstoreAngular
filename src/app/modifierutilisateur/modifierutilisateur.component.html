@@ -1,0 +1,56 @@
+ <div class="form-row-2 col-5">
+<div class="card md-form mt-0">
+   
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Modification</strong>
+    </h5>
+
+    <!--Card content-->
+<div class="card-body px-lg-5 pt-0"> 
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;" action="#!">
+
+        <div class="form-row-2"> 
+
+            <!-- First name -->
+            <div class="md-form">
+                <label for="nom">Nom</label>
+                <input [(ngModel)]="utilisateur.nom" type="text" name="nom" class="form-control" id="nom">
+            </div> 
+
+
+            <!-- Last name -->
+            <div class="md-form">
+                <label for="prenom">Prénom</label>
+                <input [(ngModel)]="utilisateur.prenom" type="text" name="prenom" class="form-control" id="prenom">
+            </div>
+
+        </div> 
+
+        <!-- E-mail -->
+
+        <div class="md-form-mt-0">
+            <label for="email">Email</label>
+            <input [(ngModel)]="utilisateur.email" type="email" name="email" class="form-control" id="email">
+        </div>
+        <div class="md-form-mt-0">
+            <label for="mdp">Mot de passe</label>
+            <input [(ngModel)]="utilisateur.mdp" type="text" name="mdp" class="form-control" id="mdp">
+        </div> 
+
+        <!-- Newsletter -->
+
+        
+
+
+        <!-- Sign up button -->
+
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="button"
+            (click)="update()">Modifier</button>
+
+
+    </form> 
+    <!-- Form -->
+
+ </div>

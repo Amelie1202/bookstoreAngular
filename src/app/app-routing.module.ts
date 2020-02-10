@@ -21,6 +21,8 @@ import { InfoComponent } from './info/info.component';
 import { VisiteComponent } from './visite/visite.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.component';
+import { TestComponent } from './test/test.component';
+import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutilisateur.component';
 
 
 const routes: Routes = [
@@ -117,6 +119,14 @@ const routes: Routes = [
   {
     path:"listeutilisateur",
     component:ListeutilisateurComponent
+  },
+  {
+    path:"test",
+    component:TestComponent
+  },
+  {
+    path:"modifierutilisateur/:id",
+    component:ModifierutilisateurComponent
   }
 ];
 

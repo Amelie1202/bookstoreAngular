@@ -7,7 +7,7 @@
             <th>Nom</th>
             <th>Prénom</th>
             <th>Email</th>
-            <th>Livres empruntés</th>
+            <th>Mot de passe</th>
             <th>Modifier</th>
             <th>Suppression</th>
 
@@ -18,9 +18,9 @@
                 <td>{{utilisateur.nom}}</td>
                 <td>{{utilisateur.prenom}}</td>
                 <td>{{utilisateur.email}}</td>
-                <td>{{utilisateur?.livre}}</td>
+                <td>{{utilisateur?.mdp}}</td>
                 <td><a type="button" class="btn btn-outline-warning"
-                   >Modifier</a></td>
+                    href="{{'http://localhost:4200/modifierutilisateur/'+utilisateur.idUtilisateur}}"  >Modifier</a></td>
                 <td><button type="button" class="btn btn-outline-danger"
                     (click)="delete(utilisateur.idUtilisateur)">Supprimer</button></td>
               
