@@ -28,5 +28,8 @@ return this.http.get<Utilisateur>("http://localhost:8080/utilisateurs/"+id).pipe
   update(utilisateur:Utilisateur, id:number){
     return this.http.put("http://localhost:8080/utilisateurs/"+id, utilisateur).pipe() 
   }
- }
 
+  findByLogin(utilisateur:Utilisateur){
+    return this.http.post("http://localhost:8080/utilisateurs/login/", utilisateur).pipe()
+ }
+}

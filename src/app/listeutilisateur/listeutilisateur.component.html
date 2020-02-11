@@ -8,6 +8,7 @@
             <th>Prénom</th>
             <th>Email</th>
             <th>Mot de passe</th>
+            <th>Login</th>
             <th>Modifier</th>
             <th>Suppression</th>
 
@@ -19,6 +20,7 @@
                 <td>{{utilisateur.prenom}}</td>
                 <td>{{utilisateur.email}}</td>
                 <td>{{utilisateur?.mdp}}</td>
+                <td>{{utilisateur?.login}}</td>
                 <td><a type="button" class="btn btn-outline-warning"
                     href="{{'http://localhost:4200/modifierutilisateur/'+utilisateur.idUtilisateur}}"  >Modifier</a></td>
                 <td><button type="button" class="btn btn-outline-danger"
