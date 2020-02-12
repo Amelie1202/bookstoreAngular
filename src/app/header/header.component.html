@@ -36,9 +36,16 @@
           
       </ul>
     </div>
+    <div *ngIf="condition"> <!-- ngIf pour les conditions connexion et deconnexion mis dans le header.ts-->
     <td><a href="utilisateur">
       <img src='../../assets//deer.png' class="taille"> <!--mettre l inscription dans une image, avec une petite taille du css -->
     </a></td>
+    </div>
+    <div *ngIf="!condition">
+    <td><a >
+      <img src='../../assets/exit.png' (click)="deconnexion()"class="taille"> <!--mettre l inscription dans une image, avec une petite taille du css -->
+    </a></td>
+  </div>
   </nav>
   
 
