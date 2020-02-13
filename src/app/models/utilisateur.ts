@@ -5,4 +5,5 @@ export class Utilisateur {
     email: any;
     mdp:any;
   login:any;
+  role:any;
     }

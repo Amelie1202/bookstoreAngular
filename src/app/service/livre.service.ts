@@ -50,6 +50,9 @@ findByEtagere(idEtagere: number){
   return this.http.get<Livre[]>("http://localhost:8080/livres/byEtagere/"+idEtagere).pipe()
 
 }
+affecterUtilisateur(idLivre: number, idUtilisateur: number){
+  return this.http.put("http://localhost:8080/livres/affecterUtilisateur/"+idLivre+"/"+ idUtilisateur,"").pipe()
+}
 }
   
 

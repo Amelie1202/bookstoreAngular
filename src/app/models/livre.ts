@@ -6,5 +6,5 @@ titre: any;
 auteur:any;
 categorie: any;
 etagere: any;
-
+utilisateur: any;
 }

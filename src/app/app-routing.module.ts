@@ -23,6 +23,9 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { ListeutilisateurComponent } from './listeutilisateur/listeutilisateur.component';
 import { TestComponent } from './test/test.component';
 import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutilisateur.component';
+//restreindre une page
+import {AuthGuardService} from'./service/auth-guard.service';
+import { RoleComponent } from './role/role.component';
 
 
 const routes: Routes = [
@@ -118,7 +121,8 @@ const routes: Routes = [
   },
   {
     path:"listeutilisateur",
-    component:ListeutilisateurComponent
+    component:ListeutilisateurComponent, 
+    canActivate: [AuthGuardService]
   },
   {
     path:"test",
@@ -127,6 +131,10 @@ const routes: Routes = [
   {
     path:"modifierutilisateur/:id",
     component:ModifierutilisateurComponent
+  },
+  {
+    path:"role",
+    component:RoleComponent
   }
 ];
 

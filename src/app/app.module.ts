@@ -38,6 +38,7 @@ import {MatIconModule} from'@angular/material/icon';
 import {MatSortModule} from'@angular/material/sort';
 import { TestComponent } from './test/test.component';
 import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutilisateur.component';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutil
     UtilisateurComponent,
     ListeutilisateurComponent,
     TestComponent,
-    ModifierutilisateurComponent
+    ModifierutilisateurComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { AuteurService } from '../service/auteur.service';
 import { CategorieService } from '../service/categorie.service';
 import { EtagereService } from '../service/etagere.service';
 import Swal from'sweetalert2'; //swal pour les alertes dans le ts
+import { Utilisateur } from '../models/utilisateur';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class LivreComponent implements OnInit {
   listAuteur: Auteur[]=[];
   listCategorie: Categorie[]=[];
   listEtagere: Etagere[]=[];
+  utilisateur = new Utilisateur();
 
   constructor(private livreService: LivreService, private auteurService: AuteurService, private categorieService: CategorieService, private etagereService: EtagereService) { }
 
@@ -110,6 +112,8 @@ Swal.fire({
       }
     )
   }
+
+  
 }
 
 

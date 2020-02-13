@@ -16,7 +16,7 @@ export class UtilisateurComponent implements OnInit {
   utilisateur = new Utilisateur();
 utilisateur2= new Utilisateur();
 tokendata;
-token2;
+token2; // le token decode
 decodedToken;
 helper = new JwtHelperService();
   constructor(private utilisateurService: UtilisateurService) { }
@@ -81,7 +81,7 @@ helper = new JwtHelperService();
       this.tokendata = data['token'];
       this.token2 = jwt_decode(this.tokendata); //decoder le token dans la console,
       console.log(this.token2)
-      localStorage.setItem("token",this.token2)
+      localStorage.setItem("token",this.tokendata)
         //localStorage.setItem("token", data['token']); //mettre dans le localstorage
         if (data!=null) {
         Swal.fire({
