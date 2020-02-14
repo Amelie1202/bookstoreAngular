@@ -36,4 +36,7 @@ return this.http.get<Utilisateur>("http://localhost:8080/utilisateurs/"+id).pipe
  authentification2(utilisateur:Utilisateur){
    return this.http.post("http://localhost:8080/utilisateurs/authentif/", utilisateur).pipe()
  }
+ findByRole(idRole: number){
+  return this.http.get<Utilisateur[]>("http://localhost:8080/utilisateurs/byRole/"+idRole).pipe()
+ }
 }

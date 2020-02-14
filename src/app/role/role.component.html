@@ -7,16 +7,16 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="affectationutilisateur">Utilisateur</label>
-                    <select class="form-control" name="Utilisateur" id="Utilisateur" [(ngModel)]="newUtilisateur.utilisateur">
-                        <option *ngFor="let utilisateur of listUtilisateur" [ngValue]="utilisateur">{{utilisateur.login}}
-                        </option>
+                    <select class="form-control" name="Utilisateur" id="Utilisateur" [(ngModel)]="idUser">
+                        <option *ngFor="let utilisateur of listUtilisateur" [ngValue]="utilisateur.idUtilisateur">{{utilisateur.login}}
+                        </option> <!-- utilisateur vient de la liste utilisateur puis on injecte dans le ng value puis dans le ngModel-->
                     </select>
                 </div>
                 <div class="form-group col-md-6"></div>
                 <div class="form-group col-md-4">
                     <label for="affectationrole">Role</label>
-                    <select class="form-control" name="role" id="role" [(ngModel)]="newUtilisateur.role">
-                        <option *ngFor="let role of listRole" [ngValue]="role">{{role.libelleRole}}
+                    <select class="form-control" name="role" id="role" [(ngModel)]="idRole">
+                        <option *ngFor="let role of listRole" [ngValue]="role.idRole">{{role.libelleRole}}
                         </option>
                     </select>
                 </div>
@@ -24,7 +24,7 @@
             </div>
 
             <td><button type="button" class="btn btn-outline-info"
-               >Ajouter un role</button></td>
+                (click)="affecter()" >Ajouter un role</button></td>
        
               
          </div>

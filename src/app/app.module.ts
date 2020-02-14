@@ -39,6 +39,8 @@ import {MatSortModule} from'@angular/material/sort';
 import { TestComponent } from './test/test.component';
 import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutilisateur.component';
 import { RoleComponent } from './role/role.component';
+import { ListeadminComponent } from './listeadmin/listeadmin.component';
+import { LivreutilisateurComponent } from './livreutilisateur/livreutilisateur.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { RoleComponent } from './role/role.component';
     ListeutilisateurComponent,
     TestComponent,
     ModifierutilisateurComponent,
-    RoleComponent
+    RoleComponent,
+    ListeadminComponent,
+    LivreutilisateurComponent
   ],
   imports: [
     BrowserModule,

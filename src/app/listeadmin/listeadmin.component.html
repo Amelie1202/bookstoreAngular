@@ -1,5 +1,5 @@
 
-<div class="form-group col-md-6"></div>
+<div class="form-group col-md-2">
 <div class="container">
     <table class="table table-striped">
         <thead class="table-secondary">
@@ -11,7 +11,6 @@
             <th>Login</th>
             <th>Role</th>
             <th></th>
-            <th>Livres empruntés</th>
             <th>Modifier</th>
             <th>Suppression</th>
 
@@ -26,8 +25,6 @@
                 <td>{{utilisateur?.login}}</td>
                 <td>{{utilisateur?.role?.idRole}}</td>
                 <td>{{utilisateur?.role?.libelleRole}}</td>
-                <td><a type="button" class="btn btn-outline-success"
-                    href="{{'http://localhost:4200/livreutilisateur/'+utilisateur.idUtilisateur}}">Afficher les livres empruntés</a></td>
                 <td><a type="button" class="btn btn-outline-warning"
                     href="{{'http://localhost:4200/modifierutilisateur/'+utilisateur.idUtilisateur}}"  >Modifier</a></td>
                 <td><button type="button" class="btn btn-outline-danger"
@@ -39,4 +36,5 @@
 
         </tbody>
     </table>
+</div>
 </div>

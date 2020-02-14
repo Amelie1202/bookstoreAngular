@@ -26,6 +26,9 @@ import { ModifierutilisateurComponent } from './modifierutilisateur/modifierutil
 //restreindre une page
 import {AuthGuardService} from'./service/auth-guard.service';
 import { RoleComponent } from './role/role.component';
+import { ListeadminComponent } from './listeadmin/listeadmin.component';
+import { LivreutilisateurComponent } from './livreutilisateur/livreutilisateur.component';
+import { DirecteurguardService } from './service/directeurguard.service';
 
 
 const routes: Routes = [
@@ -135,6 +138,15 @@ const routes: Routes = [
   {
     path:"role",
     component:RoleComponent
+  },
+  {
+    path:"listeadmin",
+    component:ListeadminComponent,
+    canActivate:[DirecteurguardService] //importe la classe service ou est la méthode canActivate
+  },
+  {
+    path:"livreutilisateur/:id",
+    component: LivreutilisateurComponent
   }
 ];
 

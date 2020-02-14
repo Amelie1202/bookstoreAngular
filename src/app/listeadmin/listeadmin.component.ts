@@ -3,15 +3,14 @@ import { Utilisateur } from '../models/utilisateur';
 import { UtilisateurService } from '../service/utilisateur.service';
 
 @Component({
-  selector: 'app-listeutilisateur',
-  templateUrl: './listeutilisateur.component.html',
-  styleUrls: ['./listeutilisateur.component.css']
+  selector: 'app-listeadmin',
+  templateUrl: './listeadmin.component.html',
+  styleUrls: ['./listeadmin.component.css']
 })
-export class ListeutilisateurComponent implements OnInit {
+export class ListeadminComponent implements OnInit {
   listUtilisateur: Utilisateur[] = [];
-  idRole=3;
+  idRole=2;
 
-  
   constructor(private utilisateurService: UtilisateurService) { }
 
   ngOnInit() {

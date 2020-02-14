@@ -12,13 +12,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RoleComponent implements OnInit {
 
-  newUtilisateur: Utilisateur= new Utilisateur();
-  listUtilisateur: Utilisateur[]=[];
-  listRole: Role[]=[];
+  idUser: number;
+  listUtilisateur: Utilisateur[] = [];
+  listRole: Role[] = [];
   idUtilisateur: number;
+  // utilisateur= new Utilisateur();
+  role = new Role();
+  utilisateur: Utilisateur = new Utilisateur();
+  idRole: number;
+
   constructor(private utilisateurService: UtilisateurService, private roleService: RoleService) {
-    
-   }
+
+  }
 
   ngOnInit() {
     this.utilisateurService.getAll().subscribe(
@@ -32,8 +37,23 @@ export class RoleComponent implements OnInit {
       }
     );
   }
-  affecterrole(){
-    //a faire avec des getOne
+
+  affecter() {
+    this.utilisateurService.getOne(this.idUser).subscribe( //on va chercher l id utilisateur
+      data => {
+        this.utilisateur = data;
+        this.roleService.getOne(this.idRole).subscribe( // puis son role
+          data => {
+            this.utilisateur.role = data; // on associe le role a l'utilisateur
+            this.utilisateurService.update(this.utilisateur, this.utilisateur.idUtilisateur).subscribe( // on affecte
+              data => {
+              }
+            );
+
+          }
+        )
+      }
+    )
   }
 
 }

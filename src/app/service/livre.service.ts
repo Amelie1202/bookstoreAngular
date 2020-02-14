@@ -53,6 +53,9 @@ findByEtagere(idEtagere: number){
 affecterUtilisateur(idLivre: number, idUtilisateur: number){
   return this.http.put("http://localhost:8080/livres/affecterUtilisateur/"+idLivre+"/"+ idUtilisateur,"").pipe()
 }
+findByUtilisateur(idUtilisateur: number){
+  return this.http.get<Livre[]>("http://localhost:8080/livres/byUtilisateur/"+idUtilisateur).pipe()
+}
 }
   
 
